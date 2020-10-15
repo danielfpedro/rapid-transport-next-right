@@ -12,21 +12,24 @@ import OurJob from '../components/our-job';
 const Index = () => {
   const blocksPad = 'xlarge';
   return (
-    <Box>
+    <Box background="light-3">
       <MyNavbar />
+
       <Box background="">
         <Header />
       </Box>
 
-      <Box background="light-1" pad={{ vertical: blocksPad }}>
-        <OurJob />
+      <Box background="white">
+        <MainContent>
+          <OurJob backgroundColor="white" />
+        </MainContent>
       </Box>
 
-      <Box background="" pad={{ vertical: blocksPad }}>
+      <Box background="black">
         <MyGallery />
       </Box>
 
-      <Box background="light-1" pad={{ vertical: blocksPad }}>
+      <Box background="white">
         <Contacts />
       </Box>
 

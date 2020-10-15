@@ -4,7 +4,7 @@ import React from 'react';
 
 const CardContact = ({ icon, title, content = null }) => {
   return (
-    <Card>
+    <Card elevation="xsmall">
       <CardBody pad="large">
         <Box direction="row" gap="medium">
           <Box>{icon}</Box>

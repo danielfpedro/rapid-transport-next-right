@@ -1,10 +1,10 @@
 import { Box } from 'grommet';
 import React from 'react';
 
-const MainContent = ({ children }) => {
+const MainContent = ({ children, backgroundColor = null,pad= null }) => {
   return (
-    <Box align="center">
-      <Box width="xlarge">
+    <Box align="center" background={backgroundColor} pad={pad}>
+      <Box width="xxlarge">
         {children}
       </Box>
     </Box>

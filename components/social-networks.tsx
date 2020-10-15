@@ -1,18 +1,18 @@
-import { Anchor, Box } from 'grommet';
+import { Anchor, Box, Heading } from 'grommet';
 import { FacebookOption, Instagram } from 'grommet-icons';
 
 const items = [
   {
-    icon: <FacebookOption size="large" color="white" />,
+    icon: <FacebookOption size="35px" color="white" />,
     backgroundColor: 'facebook',
   },
   {
-    icon: <Instagram size="35px" color="white" />,
+    icon: <Instagram size="30px" color="white" />,
     backgroundColor: 'instagram',
   },
 ];
 
-const size = 75;
+const size = 60;
 
 const SocialNetworks = () => {
   return (
@@ -32,6 +32,7 @@ const SocialNetworks = () => {
               >
                 {item.icon}
               </Box>
+              
             }
           />
         </Box>
