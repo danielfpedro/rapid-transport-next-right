@@ -4,13 +4,13 @@ import React from 'react';
 
 const CardContact = ({ icon, title, content = null }) => {
   return (
-    <Card elevation="xsmall">
+    <Card elevation="0" background="white">
       <CardBody pad="large">
         <Box direction="row" gap="medium">
           <Box>{icon}</Box>
           <Box>
             <Box>
-              <Heading level="3" margin="none" color="dark-1">
+              <Heading level="4" margin="none" color="dark-1">
                 {title}
               </Heading>
             </Box>

@@ -1,10 +1,10 @@
+import { Card, Image } from 'grommet';
 import React from 'react';
-import { Box, Card, Image } from 'grommet';
 
 const GalleryTile = ({ filename }) => {
   return (
-    <Card background="light-1" height="small" elevation="0">
-      <Image src={`images/${filename}.jpg`} fit="cover" />
+    <Card fill elevation="0">
+      <Image src={`images/${filename}.jpg`} fit="cover" height="300px" />
     </Card>
   );
 };

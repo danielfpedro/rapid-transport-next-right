@@ -1,11 +1,15 @@
 import { Box, Heading } from 'grommet';
 import {
+  Clock,
   Facebook,
   FacebookOption,
   Instagram,
   MailOption,
+  Map,
+  MapLocation,
   Phone,
 } from 'grommet-icons';
+import { Head } from 'next/document';
 import React from 'react';
 import CardContact from './card-contact';
 import MainContent from './main-content';
@@ -13,8 +17,8 @@ import SocialNetworks from './social-networks';
 
 const Contacts = () => {
   return (
-    <MainContent>
-      <Box background="white" pad="xlarge">
+    <MainContent width="xlarge">
+      {/* <Box background="white" pad="xlarge">
         <Box align="center">
           <Heading
             level="1"
@@ -23,8 +27,19 @@ const Contacts = () => {
           >
             Follow Us
           </Heading>
+        </Box> */}
+
+      <Box pad={{ vertical: 'xlarge' }}>
+        <Box align="center">
+          <Heading level="1" margin={{ bottom: 'large', top: 'none' }}>
+            Get In Touch With Us
+          </Heading>
+          {/* <Heading level="3" textAlign="center" margin={{ bottom: 'xlarge' }}>
+            If you’d like a free consultation, please start by completing the
+            form:
+          </Heading> */}
         </Box>
-        {/* <Box direction="row" margin={{ bottom: 'medium' }} gap="medium">
+        <Box direction="row" gap="large">
           <Box fill>
             <CardContact
               icon={<MailOption color="brand" size="large" />}
@@ -39,9 +54,27 @@ const Contacts = () => {
               content="(88) 9844-6655"
             />
           </Box>
-        </Box> */}
+        </Box>
 
-        {/* <Box direction="row" margin="none" gap="medium">
+        <Box direction="row" gap="large" pad={{ top: 'large' }}>
+          <Box fill>
+            <CardContact
+              icon={<Map color="brand" size="large" />}
+              title="Location"
+              content="Phoenix, Arizona USA"
+            />
+          </Box>
+          <Box fill>
+            <CardContact
+              icon={<Clock color="brand" size="large" />}
+              title="Working Hour"
+              content="09:00 - 16:00"
+            />
+          </Box>
+        </Box>
+      </Box>
+
+      {/* <Box direction="row" margin="none" gap="medium">
           <Box fill>
             <CardContact
               icon={<Instagram color="instagram" size="large" />}
@@ -55,11 +88,11 @@ const Contacts = () => {
             />
           </Box>
         </Box> */}
-
+      {/* 
         <Box align="center" margin={{ top: 'large' }}>
           <SocialNetworks />
         </Box>
-      </Box>
+      </Box> */}
     </MainContent>
   );
 };

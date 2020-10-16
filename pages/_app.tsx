@@ -5,7 +5,7 @@ const myTheme = {
   global: {
     colors: {
       brand: '#d64541',
-      facebook: '#315DF7',
+      facebook: '#007fff',
       instagram: '#E00086',
     },
     font: {

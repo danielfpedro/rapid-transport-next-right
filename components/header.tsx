@@ -8,21 +8,21 @@ const Header = () => {
     <Box
       align="center"
       style={{
-        backgroundImage: 'url(images/tey.png)',
+        backgroundImage: 'url(images/header.png)',
         backgroundPosition: 'center, center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundColor: '#FFF',
+        backgroundColor: '#000',
       }}
-      pad={{ vertical: 'large' }}
+      pad={{ vertical: 'xlarge' }}
     >
-      <Box align="center" direction="row" gap="xlarge">
+      <Box align="center" direction="row" gap="xlarge" >
         <Box align="center" background="" flex={{ grow: 1 }}>
           <Heading color="light-1" margin="none">
             You Call, We Haul, That's all!
           </Heading>
 
-          <Heading color="light-1" level="3" textAlign="center">
+          <Heading color="light-1" level="3">
             Montway Auto Transport is the number one rated car transporter in
             the U.S.
           </Heading>

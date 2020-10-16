@@ -1,6 +1,8 @@
 import { Anchor, Box, Button, Image, Nav, Text } from 'grommet';
+import { Facebook, Instagram } from 'grommet-icons';
 import React from 'react';
 import MainContent from './main-content';
+import NavbarSecondary from './navbar-secondary';
 
 const items = [
   {
@@ -19,33 +21,35 @@ const MyNavbar = () => {
     <Box background="white">
       {/* <Box height="4px" background="brand" flex="grow"></Box>       */}
 
-      <Box background="light-2" fill align="center">
-        <Box pad={{ vertical: 'small' }} width="xxlarge" align="end">
-          <Text size="medium">Phoenix, Arizona USA . (888) 666-8929</Text>
-        </Box>
-      </Box>
+      {/* <NavbarSecondary /> */}
+
       <MainContent>
         <Box
           direction="row"
           fill
-          background=""
           align="center"
-          pad={{ horizontal: 'large', vertical: '30px' }}
+          pad={{ horizontal: 'none', vertical: '30px' }}
         >
           <Box flex={{ grow: 1 }}>
             <Image src="images/logo.png" width="340px" />
           </Box>
 
-          <Box direction="row" gap="large" align="center">
+          <Box gap="large" direction="row">
             {items.map((item) => (
               <Anchor label={item.label} color="dark-1" />
             ))}
+
             {/* <Button label="Get a quote!" primary /> */}
+
+            <Box direction="row" gap="small">
+              <Facebook color="facebook" />
+              <Instagram color="instagram" />
+            </Box>
           </Box>
         </Box>
       </MainContent>
 
-      {/* <Box height="4px" background="brand" flex="grow"></Box>       */}
+      <Box height="5px" background="brand" flex="grow"></Box>      
     </Box>
   );
 };
