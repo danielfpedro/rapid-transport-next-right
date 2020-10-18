@@ -1,4 +1,4 @@
-import { Box, Heading } from 'grommet';
+import { Box, Button, Heading } from 'grommet';
 import React from 'react';
 import AboutUs from '../components/about-us';
 import Call from '../components/call';
@@ -23,16 +23,21 @@ const Index = () => {
       <Box background="white">
         <MainContent>
           <OurJob backgroundColor="white" />
+          <Box pad={{ top: 'large', bottom: 'xlarge' }} align="center">
+            <Box width="medium">
+              <Button size="large" reverse={true} primary label="Quote now!" />
+            </Box>
+          </Box>
         </MainContent>
       </Box>
 
-      <Call />
+      {/* <Box background="light-4">
+        <Call />
+      </Box> */}
 
-      <Box background="black">
+      <Box background="#000">
         <MyGallery />
       </Box>
-
-      
 
       <Box background="light-3">
         <Contacts />

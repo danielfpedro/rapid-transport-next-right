@@ -13,10 +13,10 @@ import React from 'react';
 
 const QuoteForm = () => {
   return (
-    <Card width="medium" background="white">
+    <Card background="white">
 
       <CardHeader pad="medium">
-        <Heading level="3" margin="none" color="dark-1">
+        <Heading level="3" margin="none" color="dark-1" textAlign="center">
           Get an instant quote or call now (888) 666-8929
         </Heading>
       </CardHeader>

@@ -3,7 +3,7 @@ import MainContent from './main-content';
 
 const Call = () => {
   return (
-    <Box background="white" pad="xlarge">
+    <Box pad="xlarge">
       <MainContent>
         <Box height="4px" background="brand"></Box>
         <Box align="center">

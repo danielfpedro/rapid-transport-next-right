@@ -14,25 +14,34 @@ const Header = () => {
         backgroundSize: 'cover',
         backgroundColor: '#000',
       }}
-      pad={{ vertical: 'xlarge' }}
+      pad={{ vertical: '120px' }}
     >
-      <Box align="center" direction="row" gap="xlarge" >
-        <Box align="center" background="" flex={{ grow: 1 }}>
-          <Heading color="light-1" margin="none">
-            You Call, We Haul, That's all!
+      <Box align="center" width="xlarge" direction="row" gap="xlarge">
+        <Box fill>
+          <Heading
+            color="light-1"
+            margin="none"
+            textAlign="start"
+            style={{ textShadow: '0px 2px 1px rgba(0, 0, 0, 1)' }}
+          >
+            Rapidez e segurança para transportar seu automóvel!
           </Heading>
 
-          <Heading color="light-1" level="3">
-            Montway Auto Transport is the number one rated car transporter in
-            the U.S.
+          <Heading
+            color="light-1"
+            level="3"
+            margin={{ vertical: 'medium' }}
+            textAlign="start"
+            style={{ textShadow: '0px 2px 1px rgba(0, 0, 0, 1)' }}
+          >
+            Com a Rapid Transport USA você pode enviar seu veículo para qualquer
+            lugar dos EUA com agilidade e segurança.
           </Heading>
         </Box>
-        <Box>
+
+        <Box width="700px">
           <QuoteForm />
         </Box>
-        {/* <Box background="">
-            <QuoteForm />
-          </Box> */}
       </Box>
     </Box>
   );

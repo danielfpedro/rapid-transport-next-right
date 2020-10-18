@@ -31,7 +31,7 @@ const Contacts = () => {
 
       <Box pad={{ vertical: 'xlarge' }}>
         <Box align="center">
-          <Heading level="1" margin={{ bottom: 'large', top: 'none' }}>
+          <Heading level="2" margin={{ bottom: 'large', top: 'none' }}>
             Get In Touch With Us
           </Heading>
           {/* <Heading level="3" textAlign="center" margin={{ bottom: 'xlarge' }}>

@@ -9,9 +9,9 @@ const AboutUs = () => {
         backgroundImage: 'url(images/footer.png)',
         backgroundPosition: 'top, center',
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: '2560px auto',
         backgroundColor: '#000',
-        height: '850px',
+        height: '1050px',
       }}
       pad={{ vertical: 'xlarge' }}
     >

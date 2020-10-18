@@ -3,9 +3,9 @@ import { Home } from 'grommet-icons';
 import { Head } from 'next/document';
 import React from 'react';
 
-const ServiceCard = ({ icon, filename }) => {
+const ServiceCard = ({ icon, text, filename }) => {
   return (
-    <Box background="">
+    <Box fill>
       <Box alignSelf="center" margin={{ bottom: 'large' }}>
         {/* <Image src={`images/vectors/${filename}.svg`} fill /> */}
         {icon}
@@ -14,12 +14,14 @@ const ServiceCard = ({ icon, filename }) => {
         <Heading
           level="3"
           color="dark-1"
+          textAlign="center"
           margin={{ bottom: 'small', top: 'none' }}
         >
           Its title Here
         </Heading>
-        You don't have to code to create your own site. Select one of available
-        themes in the Mobirise sitebuilder.
+        <Text textAlign="center">
+        {text}
+        </Text>
       </Box>
     </Box>
     // <Box align="center" margin="none">

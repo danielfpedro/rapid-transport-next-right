@@ -47,29 +47,35 @@ const MyGallery = () => {
             level="1"
             margin={{ bottom: 'medium', top: 'none' }}
           >
-            Sobre Nós
+            About Us
           </Heading>
-          <Heading
-            level="3"
-            margin={{ bottom: 'large', top: 'none' }}
-            textAlign=""
-            color="light-2"
-          >
-            Rapid Transport é uma company maneira de confiança e tal.
-          </Heading>
+          <Box>
+            <Heading
+              level="3"
+              margin={{ bottom: 'large', top: 'none' }}
+              color="light-1"
+            >
+              A Rapid Transport USA faz transportes de veículos em todo o país
+              garantindo rapidez e economia.
+            </Heading>
+          </Box>
         </Box>
 
         <Box
           direction="row"
-          fill
+          height="500px"
           gap="medium"
-          
           margin={{ bottom: 'medium' }}
         >
-          <GalleryTile filename="gal-1" />
-          <GalleryTile filename="gal-2" />
-          <GalleryTile filename="gal-3" />
+          <Box flex={{ grow: '2' }}>
+            <GalleryTile filename="gal-5" />
+          </Box>
+          <Box flex={{ grow: '1' }} gap="medium">
+            <GalleryTile filename="gal-8" />
+            <GalleryTile filename="gal-1" />
+          </Box>
         </Box>
+
         {/* <Box direction="row" fill gap="medium">
 
         </Box> */}
