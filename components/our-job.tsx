@@ -1,35 +1,49 @@
-import { Box, Heading } from 'grommet';
-import { Contact, Calendar, Deliver } from 'grommet-icons';
+import { Box, Button, ResponsiveContext } from 'grommet';
+import { Deliver, DocumentText, StatusGood } from 'grommet-icons';
+import React from 'react';
+import MainContent from './main-content';
 import ServiceCard from './service-card';
 
-const OurJob = ({ backgroundColor }) => {
-  const iconColor = 'dark-2';
+const OurJob = ({}) => {
+	const size = React.useContext(ResponsiveContext);
 
-  return (
-    <Box align="center" margin={{ vertical: 'xlarge' }}>
-      {/* <Heading level="2" textAlign="center" margin={{ bottom: 'xlarge' }}>
-        Como funciona?
-      </Heading> */}
+	const iconColor = 'dark-2';
 
-      <Box direction="row" gap="large" align="center">
-        <ServiceCard
-          filename="01"
-          text="Você solicita sua cotação online ou por telefone inserindo dados como a origem e o destino do seu veículo."
-          icon={<Contact color={iconColor} size="xlarge" />}
-        />
-        <ServiceCard
-          filename="02"
-          text="No dia programado para a viagem, seu automóvel será coletado e estará totalmente seguro do início ao fim da viagem."
-          icon={<Calendar color={iconColor} size="xlarge" />}
-        />
-        <ServiceCard
-          filename="03"
-          text="Ao fim do transporte, seu veículo é entregue exatamente da mesma forma em que foi coletado."
-          icon={<Deliver color={iconColor} size="xlarge" />}
-        />
-      </Box>
-    </Box>
-  );
+	return (
+		<MainContent>
+			<Box
+				direction={size != 'small' ? 'row' : 'column'}
+				gap={size != 'small' ? 'large' : 'xlarge'}
+				align="start"
+			>
+				<ServiceCard
+					filename="01"
+					title="Cotação"
+					text="Solicite sua cotação pelo site ou por telefone. Você receberá o orçamento com a garantia do melhor preço."
+					// icon={<Contact color={iconColor} size="large" />}
+					icon={<DocumentText size="large" />}
+				/>
+				<ServiceCard
+					filename="02"
+					title="Nós fazemos tudo"
+					text="Na data agendada, seu veículo será transportado com cobertura total pela seguradora."
+					icon={<Deliver size="large" />}
+				/>
+				<ServiceCard
+					filename="03"
+					title="Entrega"
+					text="Após o transporte feito com total cuidado e segurança, você recebe o veículo no endereço combinado."
+					icon={<StatusGood size="large" />}
+				/>
+			</Box>
+
+			<Box pad={{ top: '60px', bottom: 'none' }} align="center">
+				<Box width="medium">
+					<Button size="large" reverse={true} primary label="Quote now!" />
+				</Box>
+			</Box>
+		</MainContent>
+	);
 };
 
 export default OurJob;

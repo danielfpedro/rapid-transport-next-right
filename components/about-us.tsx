@@ -11,19 +11,19 @@ const AboutUs = () => {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '2560px auto',
         backgroundColor: '#000',
-        height: '1050px',
+        height: '1000px',
       }}
       pad={{ vertical: 'xlarge' }}
     >
       <MainContent>
         <Box align="center">
           <Heading color="light-1" margin="none">
-            You Call, We Haul, That's all! Us
+            You Call, We Haul, That's all!
           </Heading>
-          <Heading size="2" textAlign="center" color="light-1">
-            Montway Auto Transport is the number one rated car transporter in
+          {/* <Heading size="2" textAlign="center" color="light-1">
+            Rapid Transport is the number one rated car transporter in
             the U.S.
-          </Heading>
+          </Heading> */}
         </Box>
       </MainContent>
     </Box>

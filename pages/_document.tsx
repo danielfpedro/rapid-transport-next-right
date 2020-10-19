@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { mediaStyles } from '../components/media';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -36,6 +37,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           />
+          <style
+            type="text/css"
+            dangerouslySetInnerHTML={{ __html: mediaStyles }}
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
         <body>
           <Main />

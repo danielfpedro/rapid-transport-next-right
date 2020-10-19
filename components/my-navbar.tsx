@@ -1,44 +1,41 @@
-import { Anchor, Box, Button, Image, Nav, Text } from 'grommet';
+import { Box, Image, ResponsiveContext } from 'grommet';
 import { Facebook, Instagram } from 'grommet-icons';
 import React from 'react';
 import MainContent from './main-content';
 import NavbarItems from './navbar-items';
-import NavbarSecondary from './navbar-secondary';
+import useBreakpoint from 'use-breakpoint';
+
+
 
 const MyNavbar = () => {
-  return (
-    <Box background="white">
-      {/* <Box height="4px" background="brand" flex="grow"></Box>       */}
+	const size = React.useContext(ResponsiveContext);
 
-      {/* <NavbarSecondary /> */}
+	const socialMedia = (
+		<Box direction="row" gap="small">
+			<Facebook color="facebook" />
+			<Instagram color="instagram" />
+		</Box>
+	);
+	const items = (
+		<Box gap="large" direction="row">
+			<NavbarItems dir="row" />
+			{socialMedia}
+		</Box>
+	);
 
-      <MainContent width="xxlarge">
-        <Box
-          direction="row"
-          fill
-          align="center"
-          pad={{ horizontal: 'none', vertical: '30px' }}
-        >
-          <Box flex={{ grow: 1 }}>
-            <Image src="images/logo.png" width="340px" />
-          </Box>
-
-          <Box gap="large" direction="row">
-            
-            <NavbarItems />
-
-            <Box direction="row" gap="small">
-              <Facebook color="facebook" />
-              <Instagram color="instagram" />
-            </Box>
-            {/* <Text>Phoenix, Arizona USA . (88) 9956-55666</Text> */}
-          </Box>
-        </Box>
-      </MainContent>
-
-      {/* <Box height="2px" background="brand" flex="grow"></Box> */}
-    </Box>
-  );
+	return (
+		<Box background="white">
+			Size: {size}
+			<MainContent width="xxlarge" pad={{ horizontal: 'large', vertical: '2em' }}>
+				<Box direction="row" fill align="center">
+					<Box flex={{ grow: 1 }} align={size != 'small' ? null : 'center'}>
+						<Image src="images/logo.png" width={size != 'small' ? '340px' : '280px'} />
+					</Box>
+					{size != 'small' && items}
+				</Box>
+			</MainContent>
+		</Box>
+	);
 };
 
 export default MyNavbar;
